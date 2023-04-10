@@ -57,6 +57,7 @@ class SessionHelper:
 
     def open_manage_project_page(self):
         wd = self.app.wd
+        self.open_manage_page()
         if self.is_on_page("/mantisbt-1.2.20/manage_proj_page.php") is False:
             wd.find_element_by_css_selector("a["
                                             "href='/mantisbt-1.2.20/manage_proj_page.php']").click()
