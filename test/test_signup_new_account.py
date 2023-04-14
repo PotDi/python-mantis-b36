@@ -8,7 +8,7 @@ def random_username(prefix, maxlen):
         random.randrange(maxlen))])
 
 def test_signup_new_account(app):
-    username = random_username("user_", 10)
+    username = random_username("user_", 5)
     email = username + "@localhost"
     password = "test"
     app.james.ensure_user_exists(username, password)
